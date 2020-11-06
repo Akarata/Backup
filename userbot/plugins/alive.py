@@ -10,7 +10,7 @@ CAT_IMG = Config.ALIVE_PIC
 JISAN = (
     str(Config.CUSTOM_ALIVE_TEXT)
     if Config.CUSTOM_ALIVE_TEXT
-    else "❤ I'm Alive, Master ❤"
+    else "✘   I'm Alive,  Master   ✘"
 )
 
 
@@ -27,12 +27,12 @@ async def amireallyalive(alive):
     if CAT_IMG:
         cat_caption = f"<b>{JISAN}</b>\n\n"
         cat_caption += f"<b> ✘   [   👤   ]  ➥  My Master : {hmention}</b>\n"
-        cat_caption += f"<b> ✘  [   🕒   ]  ➥  Uptime :</b> <code>{uptime}</code>\n"
+        cat_caption += f"<b> ✘   [   🕒   ]  ➥  Uptime :</b> <code>{uptime}</code>\n"
         cat_caption += (
             f"<b> ✘   [   🐍   ]  ➥  Python :</b> <code>{python_version()}</code>\n"
         )
         cat_caption += (
-            f"<b>✘   [   ⚙️   ]  ➥ Telethon :</b> <code>{version.__version__}</code>\n"
+            f"<b> ✘   [   ⚙️   ]  ➥ Telethon :</b> <code>{version.__version__}</code>\n"
         )
         cat_caption += f"<b> ✘   [   🤖   ]  ➥  Project_Akarata :</b>1.0\n"
         cat_caption += (
