@@ -180,10 +180,10 @@ async def _(event):
         
         
 ================================================================================
-    \n\n📌** CMD ➥** `.fclone`<reply to user who you want to clone\
-    \n**USAGE   ➥  **Fully clone the replied user account with username also\
-    \n\n📌** CMD ➥** `.frevert`\
-    \n**USAGE   ➥  **Reverts back to your profile use it if you used `.fclone`\
+    \n\n✅** CMD ➥** `.fclone`<balas ke pesan ke user\
+    \n**Fungsi   ➥  **Full clone ke user yang kamu balas\
+    \n\n✅** CMD ➥** `.frevert`\
+    \n**Fungsi   ➥  **Untuk mengembalikan`.fclone`\
     
 =================================================================================
 """
@@ -241,11 +241,11 @@ async def get_full_user(event):
 
 CMD_HELP.update(
     {
-        "clone": "__**PLUGIN NAME :** Clone__\
-    \n\n📌** CMD ➥** `.clone`<reply to user who you want to clone\
-    \n**USAGE   ➥  **Clone the replied user account\
-    \n\n📌** CMD ➥** `.revert`\
-    \n**USAGE   ➥  **Reverts back to your profile which you have set in heroku for  AUTONAME,DEFAULT_BIO\
+        "clone": "__**Nama Plugin :** Clone__\
+    \n\n✅** CMD ➥** `.clone`<balas pesan ke user\
+    \n**Fungsi   ➥  **Clone ke user yang kamu balas\
+    \n\n✅** CMD ➥** `.revert`\
+    \n**Fungsi   ➥  **balikin profil kamu dimana ada di  AUTONAME,DEFAULT_BIO\
     "
     }
 )
