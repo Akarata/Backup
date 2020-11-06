@@ -45,7 +45,7 @@ async def _(event):
             end = datetime.now()
             ms = (end - start).seconds
             await mone.edit(
-                f"<b><i>➥ Diunduh dalam {ms} detik.</i></b>\n<b><i>➥ Diunduh ke :-</i></b> <code>{downloaded_file_name}</code>\n<b><i>➥ Diunduh oleh :- {hmention}</i></b>",
+                f"<b><i>»» Diunduh dalam {ms} detik.</i></b>\n<b><i>»» Diunduh ke :-</i></b> <code>{downloaded_file_name}</code>\n<b><i>»» Diunduh oleh :- {hmention}</i></b>",
                 parse_mode="html",
             )
     elif input_str:
@@ -86,7 +86,7 @@ async def _(event):
         ms = (end - start).seconds
         if downloader.isSuccessful():
             await mone.edit(
-                f"<b><i>➥ Diunduh dalam {ms} detik.</i></b>\n<b><i>➥ Diunduh ke :-</i></b> <code>{downloaded_file_name}</code>\n<b><i>➥ Diunduh oleh :- {hmention}</i></b>",
+                f"<b><i>»» Diunduh dalam {ms} detik.</i></b>\n<b><i>»» Diunduh ke :-</i></b> <code>{downloaded_file_name}</code>\n<b><i>»» Diunduh oleh :- {hmention}</i></b>",
                 parse_mode="html",
             )
         else:
@@ -97,8 +97,8 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "download": "__**PLUGIN NAME :** Download__\
-\n\n📌** CMD ➥** `.download` <link|filename> or reply to media\
-\n**USAGE   ➥  **Mengunduh file ke server."
+        "download": "__**Nama Plugin :** Download__\
+\n\n✅** CMD ➥** `.download` <link|filename> atau balas pesan ke file atau media\
+\n**Fungsi   ➥  **Mengunduh file ke server."
     }
 )
