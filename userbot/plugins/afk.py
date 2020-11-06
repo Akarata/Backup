@@ -109,7 +109,7 @@ async def on_afk(event):
         message_to_reply = (
             f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu** \n**Karena : **{reason}"
             if reason
-            else f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}`\n**Karena : **`Sedang Sibuk`"
+            else f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu** \n**Karena : **`Busy AF ( if important u can PM )`"
         )
         if event.chat_id not in Config.UB_BLACK_LIST_CHAT:
             msg = await event.reply(message_to_reply)
@@ -181,7 +181,7 @@ CMD_HELP.update(
 \n\n✅** CMD ➥** `.afk` [Optional Reason]\
 \n**Digunakan   ➥  **Memberitahu bahwa kamu sedang offline.\nMembalas pesan mereka yang men tag akun mu \
 \n\n**Catatan :** jika Kamu ingin afk dengan menggunakan hyper link [ ; ] Setelah alasan, lalu tempel tautan media.\
-\n**Contoh :** `.afk busy now ;<Media_link>`\
+\n**Contoh :** `.afk lagi comli;<Media_link>`\
 "
     }
 )
