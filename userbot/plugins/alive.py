@@ -56,7 +56,7 @@ async def amireallyalive(alive):
             f"<b> »» [⚙️] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
             f"<b> »» [🤖] ➥ Bot :</b> <code>{catversion}</code>\n"
             f"<b> »» [💻] ➥ Database :</b> <code>{check_sgnirts}</code>\n\n"
-            "    | <a href = https://github.com/bapakbapak><b>Dame_Project</b></a> | ",
+            "    | <a href = https://github.com/bapakbapak><b>SnakEXenzia_Project</b></a> | ",
             parse_mode="html",
         )
 
