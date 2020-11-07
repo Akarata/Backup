@@ -54,5 +54,7 @@ Thanks to :
 *   [Alfiananda](https://github.com/alfianandaa) - ProjectAlf
 *   [Mr.Miss](https://github.com/keselekpermen69) - UserButt
 *   [AdekMaulana](https://github.com/adekmaulana) - ProjectBish
+*   [MoveAngel](https://github.com/MoveAngel) - One4uBot
+*   [AidilAryanto](https://github.com/aidilaryanto) - ProjectDils 
 
 
