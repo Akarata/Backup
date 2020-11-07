@@ -1,7 +1,7 @@
 FROM Akarata/Akarata_Project:latest
 
 #clonning repo 
-RUN git clone https://github.com/Akarata/AkaProject.git /root/userbot
+RUN git clone https://github.com/Akarata/Project_Akarata.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
