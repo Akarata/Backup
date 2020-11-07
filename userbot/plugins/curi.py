@@ -78,7 +78,7 @@ async def kang(args):
         else:
             return await args.edit("`Unsupported File!`")
     else:
-        return await args.edit("`Itu ga bisa dicolong...`")
+        return await args.edit("`Itu ga bisa dicuri...`")
 
     if photo:
         splat = args.text.split()
@@ -353,15 +353,15 @@ async def sticker_to_png(sticker):
 
 CMD_HELP.update(
     {
-        "✅stickers": ">`.kang/.curi [emoji('s)]?`"
-        "\nUsage: Balas .kang ke stiker atau gambar untuk ditempelkan ke paket userbot Anda "
+        "Curi": ">`.kang/.curi [emoji('s)]?`"
+        "\nFungsi: Balas .kang ke stiker atau gambar untuk ditempelkan ke paket userbot Anda "
         "\natau tentukan emoji yang Anda inginkan."
-        "\n\n>`✅.kang/.curi (emoji['s]]?` [number]?"
-        "\nUsage: Mencuri stiker/gambar ke paket yang ditentukan tetapi menggunakan ⚫ sebagai emoji "
+        "\n\n>`.kang/.curi (emoji['s]]?` [number]?"
+        "\nFungsi: Mencuri stiker/gambar ke paket yang ditentukan tetapi menggunakan ⚫ sebagai emoji "
         "atau pilih emoji yang Anda inginkan."
-        "\n\n>`✅.stkrinfo`"
-        "\nUsage: Mendapat info tentang paket stiker."
-        "\n\n>`✅.getsticker`"
-        "\nUsage: membalas stiker untuk mendapatkan file 'PNG' dari stiker."
+        "\n\n>`.stkrinfo`"
+        "\nFungsi: Mendapat info tentang paket stiker."
+        "\n\n>`.getsticker`"
+        "\nFungsi: membalas stiker untuk mendapatkan file 'PNG' dari stiker."
     }
 )
