@@ -59,8 +59,8 @@ async def detect(event):
 
 CMD_HELP.update(
     {
-        "nsfw_detect": "__**PLUGIN NAME :** Nsfw_detect__\
-    \n\n📌** CMD ➥** `.detect`\
-    \n**USAGE   ➥  **__Reply .detect command to any image or non animated sticker to detect the nudity in that__"
+        "nsfw_detect": "__**Nama Plugin :** Nsfw_detect__\
+    \n\n✅** CMD ➥** `.detect`\
+    \n**Fungsi   ➥  **__Balas .detect command ke gambar atau stiker non-animasi untuk mendeteksi ketelanjangan di dalamnya__"
     }
 )
