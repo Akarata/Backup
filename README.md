@@ -49,8 +49,8 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
 ## Credits
 Thanks to :
 *   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
-*   [Sandy1709](https://github.com/sandy1709) - Catuserbot
-*   [Jisan09](https://github.com/Jisan09) - Catuserbot
+*   [sandeep.n](https://github.com/sandy1709) - Catuserbot
+*   [Md Jisan](https://github.com/Jisan09) - Catuserbot
 *   [Alfiananda](https://github.com/alfianandaa) - ProjectAlf
 *   [Mr.Miss](https://github.com/keselekpermen69) - UserButt
 *   [AdekMaulana](https://github.com/adekmaulana) - ProjectBish
