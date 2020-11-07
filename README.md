@@ -45,3 +45,13 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
     - `APP_ID`:   You can get this value from https://my.telegram.org
     - `API_HASH`:   You can get this value from https://my.telegram.org
 - The userbot will not work without setting the mandatory vars.
+
+## Credits
+Thanks to :
+*   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
+*   [Sandy1709](https://github.com/sandy1709) - Catuserbot
+*   [Jisan09](https://github.com/Jisan09) -Catuserbot
+*   [Alfiananda](https://github.com/alfianandaa) - ProjectAlf
+*   [Mr.Miss](https://github.com/keselekpermen69) - UserButt
+
+
