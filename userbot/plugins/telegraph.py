@@ -1,4 +1,4 @@
-# telegraph utils for AkarataProject
+# telegraph utils for Project_Akarata
 
 import os
 from datetime import datetime
@@ -14,8 +14,8 @@ r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
 
 
-@bot.on(admin_cmd(pattern="telegraph (media|text) ?(.*)"))
-@bot.on(sudo_cmd(pattern="telegraph (media|text) ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="t (m|t) ?(.*)"))
+@bot.on(sudo_cmd(pattern="t (m|t) ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -41,7 +41,7 @@ async def _(event):
             end = datetime.now()
             ms = (end - start).seconds
             await catevent.edit(
-                "Downloaded to {} in {} seconds.".format(downloaded_file_name, ms),
+                "Diunduh ke {} dalam {} detik.".format(downloaded_file_name, ms),
             )
             if downloaded_file_name.endswith((".webp")):
                 resize_image(downloaded_file_name)
@@ -58,8 +58,8 @@ async def _(event):
                 jisan = "https://telegra.ph{}".format(media_urls[0])
                 os.remove(downloaded_file_name)
                 await catevent.edit(
-                    f"<b><i>➥ Uploaded to :- <a href = {jisan}>Telegraph</a></i></b>\
-                    \n<b><i>➥ Uploaded in {ms + ms_two} seconds .</i></b>\n<b><i>➥ Uploaded by :- {hmention}</i></b>",
+                    f"<b><i>✘  Di unggah ke :- <a href = {jisan}>Telegraph</a></i></b>\
+                    \n<b><i>✘  Diunggah dalam {ms + ms_two} detik .</i></b>\n<b><i>✘  Diunggah oleh :- {hmention}</i></b>",
                     parse_mode="html",
                     link_preview=True,
                 )
@@ -88,8 +88,8 @@ async def _(event):
             ms = (end - start).seconds
             cat = f"https://telegra.ph/{response['path']}"
             await catevent.edit(
-                f"<b><i>➥ Pasted to :- <a href = {cat}>Telegraph</a></i></b>\
-                \n<b><i>➥ Pasted in {ms} seconds .</i></b>",
+                f"<b><i>✘  Ditempel ke :- <a href = {cat}>Telegraph</a></i></b>\
+                \n<b><i>✘  Ditempel dalam {ms} detik .</i></b>",
                 parse_mode="html",
                 link_preview=True,
             )
@@ -106,11 +106,11 @@ def resize_image(image):
 
 CMD_HELP.update(
     {
-        "telegraph": "__**PLUGIN NAME :** Telegraph__\
-     \n\n📌** CMD ➥** `.telegraph media`\
-     \n**USAGE   ➥  **Reply to any image or video to upload it to telgraph(video must be less than 5mb)\
-     \n\n📌** CMD ➥** `.telegraph text`\
-     \n**USAGE   ➥  **Reply to any text file or any message to paste it to telegraph\
+        "telegraph": "__**Nama Plugin :** Telegraph__\
+     \n\n✅** CMD ➥** `.t m`\
+     \n**Fungsi   ➥  **balas pesan ke video atau gambar ke telegraph(video harus kurang dari 5mb)\
+     \n\n✅** CMD ➥** `.t t`\
+     \n**Fungsi   ➥  **balas pesan lalu mengupload ke telegraph\
     "
     }
 )
