@@ -17,9 +17,7 @@ async def cmd_list(event):
         reply_to_id = event.reply_to_msg_id
     input_str = event.pattern_match.group(1)
     if input_str == "text":
-        string = (
-            "Total {count} Modul {plugincount} Yang di Kang oleh Akarata\n\n"
-        )
+        string = "Total {count} Modul {plugincount} Yang di Kang oleh Akarata\n\n"
         catcount = 0
         plugincount = 0
         for i in sorted(CMD_LIST):
@@ -48,7 +46,9 @@ async def cmd_list(event):
         return
     if input_str:
         if input_str in CMD_LIST:
-            string = "<b>{count} Total modul yang di Kang oleh Akarata {input_str}:</b>\n\n"
+            string = (
+                "<b>{count} Total modul yang di Kang oleh Akarata {input_str}:</b>\n\n"
+            )
             catcount = 0
             for i in CMD_LIST[input_str]:
                 string += f"  ✘  <code>{i}</code>"
@@ -120,7 +120,9 @@ async def info(event):
         return
     if input_str:
         if input_str in SUDO_LIST:
-            string = "<b>{count} Total modul yang di Kang oleh Akarata {input_str}:</b>\n\n"
+            string = (
+                "<b>{count} Total modul yang di Kang oleh Akarata {input_str}:</b>\n\n"
+            )
             catcount = 0
             for i in SUDO_LIST[input_str]:
                 string += f"  ✘  <code>{i}</code>"
