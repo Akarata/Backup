@@ -353,7 +353,7 @@ async def sticker_to_png(sticker):
 
 CMD_HELP.update(
     {
-        "Curi": ">`.kang/.curi [emoji('s)]?`"
+        "curi": ">`.kang/.curi [emoji('s)]?`"
         "\nFungsi: Balas .kang ke stiker atau gambar untuk ditempelkan ke paket userbot Anda "
         "\natau tentukan emoji yang Anda inginkan."
         "\n\n>`.kang/.curi (emoji['s]]?` [number]?"
