@@ -18,7 +18,7 @@ async def cmd_list(event):
     input_str = event.pattern_match.group(1)
     if input_str == "text":
         string = (
-            "Total {count} commands found in {plugincount} plugins of catuserbot\n\n"
+            "Total {count} Modul {plugincount} Yang di Kang oleh Akarata\n\n"
         )
         catcount = 0
         plugincount = 0
@@ -48,10 +48,10 @@ async def cmd_list(event):
         return
     if input_str:
         if input_str in CMD_LIST:
-            string = "<b>{count} Commands found in plugin {input_str}:</b>\n\n"
+            string = "<b>{count} Total modul yang di Kang oleh Akarata {input_str}:</b>\n\n"
             catcount = 0
             for i in CMD_LIST[input_str]:
-                string += f"  ♥  <code>{i}</code>"
+                string += f"  ✘  <code>{i}</code>"
                 string += "\n"
                 catcount += 1
             await event.edit(
@@ -74,12 +74,12 @@ async def cmd_list(event):
             await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
             await event.delete()
         else:
-            string = "<b>Please specify which plugin do you want help for !!\
-                \nNumber of plugins : </b><code>{count}</code>\
+            string = "<b>Pilih salah satu modul yang ingin kamu pakai\
+                \nTotal modul yang di Kang oleh Akarata : </b><code>{count}</code>\
                 \n<b>Usage:</b> <code>.help</code> plugin name\n\n"
             catcount = 0
             for i in sorted(CMD_LIST):
-                string += "♥ " + f"<code>{str(i)}</code>"
+                string += "✘ " + f"<code>{str(i)}</code>"
                 string += "   "
                 catcount += 1
             await event.edit(string.format(count=catcount), parse_mode="HTML")
@@ -120,10 +120,10 @@ async def info(event):
         return
     if input_str:
         if input_str in SUDO_LIST:
-            string = "<b>{count} Commands found in plugin {input_str}:</b>\n\n"
+            string = "<b>{count} Total modul yang di Kang oleh Akarata {input_str}:</b>\n\n"
             catcount = 0
             for i in SUDO_LIST[input_str]:
-                string += f"  ♥  <code>{i}</code>"
+                string += f"  ✘  <code>{i}</code>"
                 string += "\n"
                 catcount += 1
             await event.reply(
@@ -135,12 +135,12 @@ async def info(event):
             await event.delete()
             await reply.delete()
     else:
-        string = "<b>Please specify which plugin do you want help for !!\
-            \nNumber of plugins : </b><code>{count}</code>\
+        string = "<b>Pilih salah satu modul yang ingin kamu pakai\
+            \nTotal modul yang di Kang oleh Akarata : </b><code>{count}</code>\
             \n<b>Usage:</b> <code>.help</code> plugin name\n\n"
         catcount = 0
         for i in sorted(SUDO_LIST):
-            string += "♥ " + f"<code>{str(i)}</code>"
+            string += "✘" + f"<code>{str(i)}</code>"
             string += "   "
             catcount += 1
         await event.reply(string.format(count=catcount), parse_mode="HTML")
@@ -159,12 +159,12 @@ async def info(event):
             await asyncio.sleep(3)
             await event.delete()
     else:
-        string = "<b>Please specify which plugin do you want help for !!\
-            \nNumber of plugins : </b><code>{count}</code>\
+        string = "<b>Pilih salah satu modul yang ingin kamu pakai\
+            \nTotal modul yang di Kang oleh Akarata : </b><code>{count}</code>\
             \n<b>Usage : </b><code>.info</code> <plugin name>\n\n"
         catcount = 0
         for i in sorted(CMD_HELP):
-            string += "♥ " + f"<code>{str(i)}</code>"
+            string += "✘ " + f"<code>{str(i)}</code>"
             string += "   "
             catcount += 1
         if event.sender_id in Config.SUDO_USERS:
