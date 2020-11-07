@@ -25,18 +25,18 @@ from userbot.events import register
 KANGING_STR = [
     "Stiker lu bagus,gw colong yak...",
     "Mantau stiker lu...",
-    "Eh kasihan stiker lu kesepian,gua culik yak...",
+    "Ett bagi duaa...",
     "Izin curi stiker lu bruh...",
     "Bagus banget!\nBoleh gua colong?!..",
     "Ku kang ya stikermu.",
     "Eh coba lihat stiker lu (☉｡☉)!→\nTapi boong...",
-    "Ada motor lampunya merah,boleh kan stiker ini aku curi?!",
+    "Ett bagi dua",
     "Mengclone stiker ini \nMuehehe...",
     "Bruh stiker lu bagus bagus,minta ya... ",
 ]
 
 
-@register(outgoing=True, pattern=r"^\.kang|.curi")
+@register(outgoing=True, pattern=r"^\.curi|.c")
 async def kang(args):
     user = await bot.get_me()
     if not user.username:
@@ -353,7 +353,7 @@ async def sticker_to_png(sticker):
 
 CMD_HELP.update(
     {
-        "curi": ">`.kang/.curi [emoji('s)]?`"
+        "curi": ">`.curi/.c [emoji('s)]?`"
         "\nFungsi: Balas .kang ke stiker atau gambar untuk ditempelkan ke paket userbot Anda "
         "\natau tentukan emoji yang Anda inginkan."
         "\n\n>`.kang/.curi (emoji['s]]?` [number]?"
