@@ -21,13 +21,13 @@ async def detect(event):
         return await edit_delete(
             event, "`Reply to any image or non animated sticker !`", 5
         )
-    catevent = await edit_or_reply(event, "`Downloading the file to check...`")
+    catevent = await edit_or_reply(event, "`Mengunduh file untuk mengecek...`")
     media = await event.client.download_media(reply)
     if not media.endswith(("png", "jpg", "webp")):
         return await edit_delete(
             event, "`Reply to any image or non animated sticker !`", 5
         )
-    catevent = await edit_or_reply(event, "`Detecting NSFW limit...`")
+    catevent = await edit_or_reply(event, "`Mendeteksi ketelanjangan...`")
     r = requests.post(
         "https://api.deepai.org/api/nsfw-detector",
         files={
@@ -43,7 +43,7 @@ async def detect(event):
     percentage = r_json["nsfw_score"] * 100
     detections = r_json["detections"]
     link = f"https://api.deepai.org/job-view-file/{pic_id}/inputs/image.jpg"
-    result = f"<b>Detected Nudity :</b>\n<a href='{link}'>>>></a> <code>{percentage:.3f}%</code>\n\n"
+    result = f"<b>Ketelanjangan terdeteksi:</b>\n<a href='{link}'>>>></a> <code>{percentage:.3f}%</code>\n\n"
     if detections:
         for parts in detections:
             name = parts["name"]
