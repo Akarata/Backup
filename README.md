@@ -56,5 +56,5 @@ Thanks to :
 *   [AdekMaulana](https://github.com/adekmaulana) - ProjectBish
 *   [MoveAngel](https://github.com/MoveAngel) - One4uBot
 *   [AidilAryanto](https://github.com/aidilaryanto) - ProjectDils 
-
+*   [AnggaR69s](https://github.com/GengKapak/DCLXVI) - DCLXVI
 
