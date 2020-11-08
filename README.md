@@ -1,4 +1,16 @@
-# Akarata_Project Userbot
+# Project_Akarata Userbot
+<p align="center">
+<a href="https://github.com/Akarata/Project_Akarata/actions?query=workflow%3AFailedChecker" > <img src="https://img.shields.io/github/workflow/status/Akarata/Project_Akarata/AkaChecker/master?label=Build&style=flat-square&logo=github-actions&logoColor=white&color=98CE00" alt="FailedChecker" /></a>
+    <a href="https://www.codacy.com/manual/MoveAngel/One4uBot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MoveAngel/One4uBot&amp;utm_campaign=Badge_Grade"><img src="https://img.shields.io/codacy/grade/e758192aef1c4178be8777694409b248?style=flat-square&logo=codacy&color=17BEBB" alt="codacy badge"/></a>
+    <a href="https://github.com/Akarata/Project_Akarata/actions?query=workflow%3APyLint"> <img src="https://img.shields.io/github/workflow/status/Akarata/Project_Akarata/PyLint/master?label=PyLint&style=flat-square&logo=github-actions&logoColor=white&color=98CE00" alt="Pylint" /></a><br>
+    <a href="https://github.com/Akarata/Project_Akarata/commits/master"><img src="https://img.shields.io/github/last-commit/Akarata/Project_Akarata/master?label=Last%20Commit&style=flat-square&logo=github&color=8C86AA" alt="Commit" /></a>
+    <a href="https://github.com/Akarata/Project_Akarata/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/Akarata/Project_Akarata?label=Contributors&style=flat-square&logo=github&color=FF4D80" alt="Contributors" /></a>
+    <a href="https://github.com/Akarata/Project_Akarata/watchers"><img src="https://img.shields.io/github/watchers/Akarata/Project_Akarata?label=Watch&style=flat-square&logo=github&color=FF70A6" alt="Watch" /></a>
+    <a href="https://github.com/Akarata/Project_Akarata/stargazers"><img src="https://img.shields.io/github/stars/Akarata/Project_Akarata?label=Stars&style=flat-square&logo=github&color=F87575" alt="Stars" /></a>
+    <a href="https://github.com/Akarata/Project_Akarata/network/members"><img src="https://img.shields.io/github/forks/Akarata/Project_Akarata?label=Fork&style=flat-square&logo=github&color=E0777D" alt="Fork" /></a>
+    <a href="https://hub.docker.com/repository/docker/akarata/project"> <img src="https://img.shields.io/docker/image-size/akarata/project/latest?label=Docker%20Size&style=flat-square&logo=docker&logoColor=white&color=1B98E0" alt="Docker Image" /></a><br>
+</p>
+
 
 [![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://heroku.com/deploy)
 
