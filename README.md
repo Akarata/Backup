@@ -12,9 +12,23 @@
     <a href="https://hub.docker.com/repository/docker/akarata/project/tags"> <img src="https://img.shields.io/docker/v/akarata/project/latest?label=Docker%20Version&style=flat-square&logo=docker&logoColor=white&color=1B98E0" alt="Docker Version" /></a><br>
 </p>
 
-
 [![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://heroku.com/deploy)
 
+```
+#include <std/disclaimer.h>
+/**
+    Your Telegram account may get banned.
+    I am not responsible for any improper use of this bot
+    This bot is intended for the purpose of having fun with memes,
+    as well as efficiently managing groups.
+    You ended up spamming groups, getting reported left and right,
+    and you ended up in a Finale Battle with Telegram and at the end
+    Telegram Team deleted your account?
+    And after that, then you pointed your fingers at us
+    for getting your acoount deleted?
+    I will be rolling on the floor laughing at you.
+/**
+```
 ### The Easy Way to deploy the bot
 Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from [Bot Father](https://t.me/botfather) and then Generate stringsession by clicking on run.on.repl.it button below and then click on deploy to heroku . Before clicking on deploy to heroku just click on fork and star just below
 
