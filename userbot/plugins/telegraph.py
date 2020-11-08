@@ -56,10 +56,10 @@ async def _(event):
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
                 await catevent.edit(
-                    "**link : **[telegraph](https://telegra.ph{})\
-                    \n**Time Taken : **`{} seconds.`".format(
+                    "**✘  link : **[telegraph](https://telegra.ph{})\
+                    \n**✘  Waktu yang dibutuhkan : **`{} detik.`".format(
                         media_urls[0], (ms + ms_two)
-                    ),
+                    ),</i></b>\n<b><i>➥ Uploaded by :- {hmention}</i></b>"
                     link_preview=True,
                 )
         elif input_str == "text":
@@ -87,8 +87,9 @@ async def _(event):
             ms = (end - start).seconds
             cat = f"https://telegra.ph/{response['path']}"
             await catevent.edit(
-                f"**link : ** [telegraph]({cat})\
-                 \n**Time Taken : **`{ms} seconds.`",
+                f"**✘  link : ** [telegraph]({cat})\
+                 \n**✘  Waktu yang dibutuhkan : **`{ms} detik.`",
+                   </i></b>\n<b><i>➥ Uploaded by :- {hmention}</i></b>"
                 link_preview=True,
             )
     else:
