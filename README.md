@@ -9,6 +9,7 @@
     <a href="https://github.com/Akarata/Project_Akarata/stargazers"><img src="https://img.shields.io/github/stars/Akarata/Project_Akarata?label=Stars&style=flat-square&logo=github&color=F87575" alt="Stars" /></a>
     <a href="https://github.com/Akarata/Project_Akarata/network/members"><img src="https://img.shields.io/github/forks/Akarata/Project_Akarata?label=Fork&style=flat-square&logo=github&color=E0777D" alt="Fork" /></a>
     <a href="https://hub.docker.com/repository/docker/akarata/project"> <img src="https://img.shields.io/docker/image-size/akarata/project/latest?label=Docker%20Size&style=flat-square&logo=docker&logoColor=white&color=1B98E0" alt="Docker Image" /></a><br>
+    <a href="https://hub.docker.com/repository/docker/akarata/project/tags"> <img src="https://img.shields.io/docker/v/akarata/project/latest?label=Docker%20Version&style=flat-square&logo=docker&logoColor=white&color=1B98E0" alt="Docker Version" /></a><br>
 </p>
 
 
