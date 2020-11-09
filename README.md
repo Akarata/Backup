@@ -1,5 +1,4 @@
 # Project_Akarata Userbot
-[![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://heroku.com/deploy)
 
 <p align="center">
 <a href="https://github.com/Akarata/Project_Akarata/actions" > <img src="https://img.shields.io/github/workflow/status/Akarata/Project_Akarata/AkaChecker/master?label=Build&style=flat-square&logo=github-actions&logoColor=white&color=F10070" alt="FailedChecker" /></a>
@@ -13,6 +12,8 @@
     <a href="https://hub.docker.com/repository/docker/akarata/project"> <img src="https://img.shields.io/docker/image-size/akarata/project/latest?label=Docker%20Size&style=flat-square&logo=docker&logoColor=white&color=F10070" alt="Docker Image" /></a><br>
     <a href="https://hub.docker.com/repository/docker/akarata/project/tags"> <img src="https://img.shields.io/docker/v/akarata/project/latest?label=Docker%20Version&style=flat-square&logo=docker&logoColor=white&color=F10070" alt="Docker Version" /></a><br>
 </p>
+
+[![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://heroku.com/deploy)
 
 
 ```
