@@ -1,4 +1,5 @@
 # Project_Akarata Userbot
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/16777857d07d452fbb7e3948a0dfcd5f)](https://app.codacy.com/gh/Akarata/Project_Akarata?utm_source=github.com&utm_medium=referral&utm_content=Akarata/Project_Akarata&utm_campaign=Badge_Grade)
 [![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://heroku.com/deploy)
 
 <p align="center">
