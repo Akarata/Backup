@@ -68,7 +68,6 @@ async def _(event):
     )
 
 
-
 CMD_HELP.update(
     {
         "ping": "__**Nama Plugin :** Ping__\
