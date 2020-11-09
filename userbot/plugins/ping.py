@@ -63,9 +63,10 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
-        f"<b>✘  Pong...!!!<b>\n✘  {ms}<b>"
+        f"<b>✘  Pong...!!!<b>\n✘  {ms}\n✘  <b>Bot : {hmention}<b>",
         parse_mode="html",
     )
+
 
 
 CMD_HELP.update(
