@@ -5,7 +5,6 @@ from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import CMD_HELP, hmention
 
 
-
 @bot.on(admin_cmd(pattern=f"fping$", outgoing=True))
 async def _(event):
     if event.fwd_from:
