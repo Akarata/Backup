@@ -45,7 +45,7 @@ for name in files:
 LOGS.info("Yay your userbot is officially working.!!!")
 LOGS.info("Congratulation, now type .alive to see message if bot is live\n")
 LOGS.info(
-    "Repo based on https://github.com/sandy1709/catuserbot and Modified by https://t.me/Akarata\n"
+    "Repo based on catuserbot and Modified by Akarata\n"
 )
 
 if len(argv) not in (1, 3, 4):
