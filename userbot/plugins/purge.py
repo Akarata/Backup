@@ -37,13 +37,13 @@ async def fastpurger(purg):
         await purg.client.delete_messages(chat, msgs)
     done = await purg.client.send_message(
         purg.chat_id,
-        "Fast purge complete!\nPurged " + str(count) + " messages.",
+        "Pembersihan cepat selesai!\nDibersihkan " + str(count) + " pesan.",
     )
 
     if BOTLOG:
         await purg.client.send_message(
             BOTLOG_CHATID,
-            "#PURGE \nPurge of " + str(count) + " messages done successfully.",
+            "#PURGE \nPembersihan " + str(count) + " pesan berhasil.",
         )
     await sleep(2)
     await done.delete()
@@ -101,14 +101,14 @@ async def delete_it(delme):
 
 CMD_HELP.update(
     {
-        "purge": "__**PLUGIN NAME :** Purge__\
-    \n\n📌** CMD ➥** `.p`\
-    \n**USAGE   ➥  **Purges all messages starting from the reply.\
-    \n\n📌** CMD ➥** `.purgeme` <x>\
-    \n**USAGE   ➥  **Deletes x amount of your latest messages.\
-    \n\n📌** CMD ➥** `.d`\
-    \n**USAGE   ➥  **Deletes the message you replied to.\
-    \n\n📌** CMD ➥** `.edit` <newmessage>\
-    \n**USAGE   ➥  **Replace your last message with <newmessage>."
+        "purge": "__**Nama Plugin :** Purge__\
+    \n\n✅** CMD ➥** `.p`\
+    \n**Fungsi   ➥  **Untuk membersihkan pesan, balas untuk menggunakannya.\
+    \n\n✅** CMD ➥** `.purgeme` <x>\
+    \n**Fungsi   ➥  **Hapus x total pesan baru.\
+    \n\n✅** CMD ➥** `.d`\
+    \n**Fungsi   ➥  **Hapus pesan yang kamu balas.\
+    \n\n✅** CMD ➥** `.edit` <pesanbaru>\
+    \n**Fungsi   ➥  **Timpa pesan, balas pesan untuk mengedit <pesanbaru>."
     }
 )
