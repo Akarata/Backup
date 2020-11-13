@@ -206,7 +206,7 @@ async def upstream(event):
         return
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`Project_Akarata  sudah`  **terupdate**  `oleh`  "
+            "\n`Project_Akarata  sudah`  **diperbarui**  `oleh`  "
             f"**{UPSTREAM_REPO_BRANCH}**\n"
         )
         return repo.__del__()
