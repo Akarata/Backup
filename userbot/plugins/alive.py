@@ -32,7 +32,7 @@ async def amireallyalive(alive):
             f"<b> ✘   [   🐍   ]  ➥  Python :</b> <code>{python_version()}</code>\n"
         )
         cat_caption += f"<b> ✘   [   ⚙️   ]  ➥  Telethon :</b> <code>{version.__version__}</code>\n"
-        cat_caption += f"<b> ✘   [   🤖   ]  ➥  Project_Akarata :<b> 1.0\n"
+        cat_caption += f"<b> ✘   [   🤖   ]  ➥  Akarata_Project :<b> 1.0\n"
         cat_caption += (
             f"<b> ✘   [   💻   ]  ➥  Database :</b> <code>{check_sgnirts}</code>\n\n"
         )
