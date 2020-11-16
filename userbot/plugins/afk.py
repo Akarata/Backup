@@ -107,7 +107,7 @@ async def on_afk(event):
     if USERAFK_ON and not (await event.get_sender()).bot:
         msg = None
         message_to_reply = (
-            f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu** \n**Karena : **{reason}"
+            f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu** \n**Karena : **{reason}\nMungkin Aku akan kembali dalam beberapa tahun :3"
             if reason
             else f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu** \n**Karena : **`Busy AF ( if important u can PM )`"
         )
@@ -159,7 +159,7 @@ async def _(event):
             afk_time = datetime.now()
         USERAFK_ON = f"on: {reason}"
         if reason:
-            await edit_delete(event, f"`Aku Akan Offline Karena ~` {reason}", 5)
+            await edit_delete(event, f"`Aku Akan Offline Karena ` {reason}", 5)
         else:
             await edit_delete(event, f"`Aku Akan Offline `", 5)
         if BOTLOG:
