@@ -1,91 +1,148 @@
-# sourcery skip: de-morgan
+import math
 import os
-import sys
+import re
 import time
-from distutils.util import strtobool as sb
-from logging import DEBUG, INFO, basicConfig, getLogger
 
 import heroku3
-from dotenv import load_dotenv
-from requests import get
-from telethon import TelegramClient
-from telethon.sessions import StringSession
+import requests
+import spamwatch as spam_watch
+from validators.url import url
 
-from .Config import Config
+from .. import *
+from ..Config import Config
 
-StartTime = time.time()
-catversion = "2.9.4"
+# =================== CONSTANT ===================
 
-if Config.STRING_SESSION:
-    session_name = str(Config.STRING_SESSION)
-    if session_name.endswith("="):
-        bot = TelegramClient(
-            StringSession(session_name), Config.APP_ID, Config.API_HASH
-        )
-    else:
-        bot = TelegramClient(
-            "TG_BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
-        ).start(bot_token=Config.STRING_SESSION)
+USERID = Config.OWNER_ID or bot.uid
+ALIVE_NAME = Config.ALIVE_NAME
+AUTONAME = Config.AUTONAME
+DEFAULT_BIO = Config.DEFAULT_BIO
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
+
+# mention user
+mention = f"[{DEFAULTUSER}](tg://user?id={USERID})"
+hmention = f"<a href = tg://user?id={USERID}>{DEFAULTUSER}</a>"
+
+
+Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
+heroku_api = "https://api.heroku.com"
+HEROKU_APP_NAME = Config.HEROKU_APP_NAME
+HEROKU_API_KEY = Config.HEROKU_API_KEY
+
+thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "thumb_image.jpg"
+
+PM_START = []
+PMMESSAGE_CACHE = {}
+PMMENU = "pmpermit_menu" not in Config.NO_LOAD
+
+if Config.PRIVATE_GROUP_BOT_API_ID is None:
+    BOTLOG = False
+    BOTLOG_CHATID = "me"
 else:
-    session_name = "startup"
-    bot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
+    BOTLOG = True
+    BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 
-# PaperPlaneExtended Support Configs
-ENV = os.environ.get("ENV", False)
+# Gdrive
+G_DRIVE_CLIENT_ID = Config.G_DRIVE_CLIENT_ID
+G_DRIVE_CLIENT_SECRET = Config.G_DRIVE_CLIENT_SECRET
+G_DRIVE_DATA = Config.G_DRIVE_DATA
+G_DRIVE_FOLDER_ID = Config.G_DRIVE_FOLDER_ID
+TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 
-CAT_ID = ["1035034432", "551290198"]
-
-# Bot Logs setup:
-if bool(ENV):
-    CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
-
-    if CONSOLE_LOGGER_VERBOSE:
-        basicConfig(
-            format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-            level=DEBUG,
-        )
-    else:
-        basicConfig(
-            format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=INFO
-        )
-    LOGS = getLogger(__name__)
-
-    # Check if the config was edited by using the already used Configiable.
-    # Basically, its the 'virginity check' for the config file ;)
-    CONFIG_CHECK = os.environ.get(
-        "___________PLOX_______REMOVE_____THIS_____LINE__________", None
-    )
-    if CONFIG_CHECK:
-        LOGS.info(
-            "Please remove the line mentioned in the first hashtag from the config.env file"
-        )
-        quit(1)
-    if Config.HEROKU_API_KEY is not None or Config.HEROKU_APP_NAME is not None:
-        HEROKU_APP = heroku3.from_key(Config.HEROKU_API_KEY).apps()[
-            Config.HEROKU_APP_NAME
-        ]
-    else:
-        HEROKU_APP = None
-
+# spamwatch support
+if Config.SPAMWATCH_API:
+    token = Config.SPAMWATCH_API
+    spamwatch = spam_watch.Client(token)
 else:
-    # Put your ppe Configs here if you are using local hosting
-    PLACEHOLDER = None
+    spamwatch = None
 
-# Global Configiables
-COUNT_MSG = 0
-USERS = {}
-COUNT_PM = {}
-LASTMSG = {}
-CMD_HELP = {}
-ISAFK = False
-AFKREASON = None
-CMD_LIST = {}
-SUDO_LIST = {}
-# for later purposes
-INT_PLUG = ""
-LOAD_PLUG = {}
+cat_users = [bot.uid]
+if Config.SUDO_USERS:
+    for user in Config.SUDO_USERS:
+        cat_users.append(user)
 
-# showing imports error
 
-from .helpers import *
-from .helpers import functions as catdef
+# ================================================
+
+if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
+    os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+
+
+# thumb image
+if Config.THUMB_IMAGE is not None:
+    check = url(Config.THUMB_IMAGE)
+    if check:
+        try:
+            with open(thumb_image_path, "wb") as f:
+                f.write(requests.get(Config.THUMB_IMAGE).content)
+        except:
+            pass
+
+
+def check(cat):
+    if "/start" in cat:
+        return True
+    try:
+        hi = re.search(cat.lower(), "(a|b|c|d)", flags=re.IGNORECASE)
+    except:
+        hi = False
+    return bool(hi)
+
+
+def set_key(dictionary, key, value):
+    if key not in dictionary:
+        dictionary[key] = value
+    elif isinstance(dictionary[key], list):
+        if value in dictionary[key]:
+            return
+        dictionary[key].append(value)
+    else:
+        dictionary[key] = [dictionary[key], value]
+
+
+# UniBorg Telegram UseRBot
+# Copyright (C) 2020 @UniBorg
+# This code is licensed under
+# the "you can't use this for anything - public or private,
+# unless you know the two prime factors to the number below" license
+# 543935563961418342898620676239017231876605452284544942043082635399903451854594062955
+# വിവരണം അടിച്ചുമാറ്റിക്കൊണ്ട് പോകുന്നവർ
+# ക്രെഡിറ്റ് വെച്ചാൽ സന്തോഷമേ ഉള്ളു..!
+# uniborg
+
+
+def check_data_base_heal_th():
+    # https://stackoverflow.com/a/41961968
+    is_database_working = False
+    output = "No Database is set"
+    if not Config.DB_URI:
+        return is_database_working, output
+    from userbot.plugins.sql_helper import SESSION
+
+    try:
+        # to check database we will execute raw query
+        SESSION.execute("SELECT 1")
+    except Exception as e:
+        output = f"❌ {str(e)}"
+        is_database_working = False
+    else:
+        output = "Functioning"
+        is_database_working = True
+    return is_database_working, output
+
+
+async def catalive():
+    _, check_sgnirts = check_data_base_heal_th()
+    sudo = "Enabled" if Config.SUDO_USERS else "Disabled"
+    uptime = await get_readable_time((time.time() - StartTime))
+    try:
+        useragent = (
+            "Mozilla/5.0 (Linux; Android 10; SM-G975F) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/80.0.3987.149 Mobile Safari/537.36"
+        )
+        user_id = Heroku.account().id
+        headers = {
+            "User-Agent": useragent,
+            "Authorization": f"Bearer {Config.HEROKU_API_KEY}",
+            "Accept": 
