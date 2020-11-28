@@ -16,7 +16,7 @@ from .Config import Config
 StartTime = time.time()
 catversion = "2.0"
 
-if Config.STRING_SESSION:
+if Var.STRING_SESSION:
     session_name = str(Config.STRING_SESSION)
     if session_name.endswith("="):
         bot = TelegramClient(
